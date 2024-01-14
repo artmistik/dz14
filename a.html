@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime.js Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div id="animatedElement" style="width: 100px; height: 100px; background-color: #3498db;"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var animatedElement = document.getElementById("animatedElement");
+
+      anime({
+        targets: animatedElement,
+        translateX: 250,
+        rotate: '1turn',
+        backgroundColor: '#ff0000',
+        duration: 2000,
+        easing: 'easeInOutQuad',
+        loop: true
+      });
+    });
+  </script>
+</body>
+</html>
